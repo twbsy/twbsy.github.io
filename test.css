@@ -1,0 +1,58 @@
+
+.button_01 {
+    border-radius: 70px;
+    border: none;
+    padding: 20px;
+    transition: all 0.5s;
+  } 
+.button_01 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.button_01 span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.button_01:hover span {
+    padding-right: 25px;
+  }
+  
+.button_01:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+.flip div:first-child {
+    animation: show 9s linear infinite;
+  }
+
+.flip > div > div {
+    margin-bottom:45px;
+    display:inline-block;
+  }
+
+@keyframes show {
+    0% {margin-top:20px;}
+    25%{margin-top:0px;}
+    50%{margin-top:-50px;}
+    75%{margin-top:-120px;}
+    100%{margin-top:-170px;}
+  }
+
+.modal-header,h4, .close{
+    font-size: 30px;
+    background-color:#5654AE;
+    color:white !important;
+    text-align: center;
+}
+
+
