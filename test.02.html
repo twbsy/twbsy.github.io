@@ -5,114 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="test.css" rel="stylesheet">
-    <title>Document</title>
+    <title>메인 화면</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="container-fluid">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <img src="" width="150px" height="50px" alt="logo_img" ></img>
-          </a>
-    
-          <ul class="nav nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link text-dark">마이페이지</a></li>
-            <li class="nav-item"><button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인/회원가입</button></li>
-          </ul>
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                <img src="logo.png" width="150px" height="50px" alt="logo_img">
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link text-dark" onclick="goToMyPage()">마이페이지</a></li>
+                <li class="nav-item"><button type="button" id="loginBtn" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">로그인/회원가입</button></li>
+            </ul>
         </header>
-      </div>
+    </div>
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 b d-flex flex-column justify-content-center align-items-center" style="background-color:#5654AE; height:300px; ">
+            <div class="col-md-12 b d-flex flex-column justify-content-center align-items-center" style="background-color:#5654AE; height:300px;">
                 <p class="h1 text-center" style="color:white">지금 바로,<br></p>
                 <div class="text_container d-flex flex-row">
                     <p class="h1 text-center" style="color:white">세상의 모든&nbsp;</p>
-                    <div class="flip  overflow-hidden" style="height:50px">
-                        <div><div class="h1 text-center " style="color:white;">A를&nbsp;</div></div>
-                        <div><div class="h1 text-center " style="color:white;">B를&nbsp;</div></div>
-                        <div><div class="h1 text-center " style="color:white;">C를&nbsp;</div></div>
+                    <div class="flip overflow-hidden" style="height:50px">
+                        <div><div class="h1 text-center" style="color:white;">풍경을&nbsp;</div></div>
+                        <div><div class="h1 text-center" style="color:white;">자연을&nbsp;</div></div>
+                        <div><div class="h1 text-center" style="color:white;">추억을&nbsp;</div></div>
                     </div>
-                    <p class="h1 text-center" style="color:white"> 찾아서</p>
+                    <p class="h1 text-center" style="color:white;"> 찾아서</p>
                 </div>
-                <button class="btn btn-primary mt-5 button_01 ps-5 pe-5 " onclick="location.href='test.04.html'" role="button" style="background-color: white; color:black;" ><span>지금 탐색 시작하기</span></button>
+                <button class="btn btn-primary mt-5 button_01 ps-5 pe-5" onclick="location.href='test.04.html'" role="button" style="background-color: white; color:black;"><span>지금 탐색 시작하기</span></button>
             </div>
         </div>
         <div class="row">
             <div class="container-fluid b d-flex flex-column pt-5">
-                <p class="h3 text-start ps-5 pb-5" style="color:black;">About us</P>
+                <p class="h3 text-start ps-5 pb-5" style="color:black;">About us & How to Use</p>
                 <div class="row d-flex justify-content-center">
-                    <p class="col-7 me-5 b " style="background-color: gainsboro; height:300px">ddd</p>
-                    <p class="col-3 b" style="background-color: gainsboro;">ddd</p>
+                    <p class="col-7 me-5 b pt-5 ps-3 " style="background-color: gainsboro; height:300px">-All star gallery에서 작품을 업로드하거나 다른 사람들의 작품을 감상해 보세요.
+                    <br><br>-해시태그를 통해 다양한 작품을 검색해 보세요.<br><br>-작품 설명과 촬영 장소 지도를 확인해 보세요.
+                    </p>
+                    <p class="col-md-3 col-sm-0 b" style="background-color: gainsboro;"></p>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="container-fluid b d-flex flex-column pt-5 pb-5">
-                <p class="h3 text-start ps-5 pb-5" style="color:black;">How to Use</P>
-                <div class="row d-flex justify-content-center">
-                    <p class="col-5 me-5 b " style="background-color: gainsboro; height:300px">ddd</p>
-                    <p class="col-5 b" style="background-color: gainsboro;">ddd</p>
-                </div>
-                <p class="col-10 mt-5 mb-5 b align-self-center" style="background-color: gainsboro; height:200px">ddd</p>
-            </div>
-        </div> 
-        <div class="row">
-            <div class="col-12 mt-5" style="background-color: gray; height:75px">ddd</div>
-            <div class="col-12" style="background-color: #5654AE; height:100px">ddd</div>
+            <div class="col-12 mt-5 pt-3 ps-3" style="color:white; background-color: gray; height:75px">공지사항</div>
+            <div class="col-12 pt-3 ps-3" style="color:white; background-color: #5654AE; height:100px">문의사항/이용약관/개인정보처리방침/고객센터</div>
         </div>
-     
     </div>
-
-
-    
-
-
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" data-bs-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header justify-content-center positon-relative" style="padding:5vh 5vw;">
-                <button type="button" class="close position-absolute" data-bs-dismiss="modal" style="border:0px; right:5vw;">
-                    &times;
-                </button>
-              <h4 style="color:white;">로그인</h4>
+            <div class="modal-content">
+                <div class="modal-header justify-content-center position-relative" style="padding:5vh 5vw;">
+                    <button type="button" class="close position-absolute" data-bs-dismiss="modal" style="border:0; right:5vw;">&times;</button>
+                    <h4 style="color:white;">로그인</h4>
+                </div>
+                <div class="modal-body" style="padding:40px 50px;">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="username">아이디</label>
+                            <input type="text" class="form-control mb-5" id="username" placeholder="아이디">
+                        </div>
+                        <div class="form-group">
+                            <label for="psw">비밀번호</label>
+                            <input type="password" class="form-control mb-5" id="psw" placeholder="비밀번호">
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>로그인 상태 유지</label>
+                        </div>
+                        <div class="container-fluid d-flex flex-column">
+                            <button type="button" class="btn btn-success btn-block align-center mt-3" style="height:10vh; background-color: #5654AE;" onclick="login()">로그인</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <a href="test.03.html" style="text-decoration: none;">회원가입</a>
+                    <a href="#" style="text-decoration: none;">비밀번호 찾기</a>
+                </div>
             </div>
-            <div class="modal-body" style="padding:40px 50px;">
-                <form role="form">
-                    <div class="form-group">
-                        <label for="username">아이디</label>
-                        <input type="text" class="form-control mb-5" id="username" placeholder="아이디">
-                    </div>
-                    <div class="form-group">
-                        <label for="psw">비밀번호</label>
-                        <input type="text" class="form-control mb-5" id="psw" placeholder="비밀번호">
-                    </div>
-                    <div class="checkbox">
-                        <label><input type="checkbox" value="" checked>로그인 상태 유지</label>
-                    </div>
-                    <div class="container-fluid d-flex flex-column">
-                        <button type="submit" class="btn btn-success btn-block align-center mt-3" style="height:10vh; background-color: #5654AE;" >로그인</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="modal-footer d-flex justify-content-center">
-                <a href="test.03.html" style="text-decoration: none;">회원가입</a>
-                <a href="#" style="text-decoration:none;">비밀번호 찾기</a>
-            </div>
-          </div>
         </div>
-      </div>
-
-
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            checkLoginStatus();
 
-    
+            $('#loginBtn').click(function() {
+                var loggedIn = localStorage.getItem('loggedIn');
+
+                if (loggedIn === 'true') {
+                    // 이미 로그인 상태일 때, 로그아웃 처리
+                    localStorage.removeItem('loggedIn');
+                    $('#loginBtn').text('로그인/회원가입');
+                } else {
+                    // 로그인 모달을 엽니다.
+                    $('#exampleModal').modal('show');
+                }
+            });
+
+            $('#exampleModal').on('hidden.bs.modal', function() {
+                $('#username').val(''); // 모달이 닫힐 때 입력된 값 초기화
+                $('#psw').val('');
+            });
+        });
+
+        function checkLoginStatus() {
+            var loggedIn = localStorage.getItem('loggedIn');
+            var loginBtn = $('#loginBtn');
+
+            if (loggedIn === 'true') {
+                loginBtn.text('로그아웃');
+            } else {
+                loginBtn.text('로그인/회원가입');
+            }
+        }
+
+        function goToMyPage() {
+            var loggedIn = localStorage.getItem('loggedIn');
+
+            if (loggedIn === 'true') {
+                // 로그인 상태일 때 마이페이지로 이동
+                window.location.href = 'mypage.html';
+            } else {
+                // 로그인 상태가 아니면 로그인 모달을 띄웁니다.
+                $('#exampleModal').modal('show');
+            }
+        }
+
+        function login() {
+            var username = $('#username').val();
+            var password = $('#psw').val();
+            var savedUsername = localStorage.getItem('username');
+            var savedPassword = localStorage.getItem('password');
+
+            if (username === savedUsername && password === savedPassword) {
+                localStorage.setItem('loggedIn', 'true');
+                $('#exampleModal').modal('hide'); // 모달 닫기
+                checkLoginStatus(); // 로그인 상태 다시 확인
+            } else {
+                alert('아이디 또는 비밀번호가 일치하지 않습니다.');
+            }
+        }
+    </script>
 </body>
 </html>
