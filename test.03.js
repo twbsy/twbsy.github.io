@@ -16,8 +16,6 @@ checkbox3.addEventListener('click',function(){
     }
 })
 
-// test.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const checkbox1 = document.getElementById("checkbox1");
     const checkbox2 = document.getElementById("checkbox2");
@@ -49,10 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         else if (username.trim()!=''&&password.trim()!='') {
-            // 회원가입 성공 시 로컬 스토리지에 회원 정보 저장
             localStorage.setItem('username', username);
             localStorage.setItem('password',password);
-            // 회원가입 후 마이페이지로 이동
             location.href = 'test.05.signup.html';
         } else {
             alert('모든 약관에 동의해야 회원가입이 가능합니다.');
