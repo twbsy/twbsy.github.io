@@ -99,18 +99,15 @@
                 var loggedIn = localStorage.getItem('loggedIn');
 
                 if (loggedIn === 'true') {
-                    // 이미 로그인 상태일 때, 로그아웃 처리
                     localStorage.removeItem('loggedIn');
                     $('#loginBtn').text('로그인/회원가입');
                 } else {
-                    // 로그인 모달을 엽니다.
                     $('#exampleModal').modal('show');
                 }
             });
 
             $('#exampleModal').on('hidden.bs.modal', function() {
-                $('#username').val(''); // 모달이 닫힐 때 입력된 값 초기화
-                $('#psw').val('');
+                $('#username').val('');
             });
         });
 
@@ -129,10 +126,8 @@
             var loggedIn = localStorage.getItem('loggedIn');
 
             if (loggedIn === 'true') {
-                // 로그인 상태일 때 마이페이지로 이동
                 window.location.href = 'mypage.html';
             } else {
-                // 로그인 상태가 아니면 로그인 모달을 띄웁니다.
                 $('#exampleModal').modal('show');
             }
         }
@@ -145,8 +140,8 @@
 
             if (username === savedUsername && password === savedPassword) {
                 localStorage.setItem('loggedIn', 'true');
-                $('#exampleModal').modal('hide'); // 모달 닫기
-                checkLoginStatus(); // 로그인 상태 다시 확인
+                $('#exampleModal').modal('hide'); 
+                checkLoginStatus(); 
             } else {
                 alert('아이디 또는 비밀번호가 일치하지 않습니다.');
             }
